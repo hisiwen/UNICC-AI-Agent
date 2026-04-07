@@ -6,7 +6,7 @@
 # =============================================================================
 
 model:
-  name: "llama3.2:8b"             # Open-weights SLM (satisfies FR-1.3)
+  name: "llama3.2"             # Open-weights SLM (satisfies FR-1.3)
   provider: "ollama"              # Local inference — no external API (FR-1.2)
   base_url: "http://localhost:11434"
 
