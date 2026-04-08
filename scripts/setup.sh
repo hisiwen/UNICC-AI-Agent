@@ -162,7 +162,7 @@ fi
 
 log "Installing Python dependencies for the FastAPI expert module..."
 "$VENV_DIR/bin/python" -m pip install --upgrade pip -q
-"$VENV_DIR/bin/python" -m pip install fastapi uvicorn httpx python-dotenv pydantic requests -q
+"$VENV_DIR/bin/python" -m pip install fastapi uvicorn httpx python-dotenv pydantic requests pyyaml -q
 ok "FastAPI expert module dependencies installed"
 
 # ─── STEP 8: Clone / update additional systems ───────────────────────────────
