@@ -97,9 +97,9 @@ require_cmd curl
 require_cmd git
 require_cmd python3
 
-python3 - <<'PY' || err "Python 3.10+ is required."
+python3 - <<'PY' || err "Python 3.11+ is required."
 import sys
-raise SystemExit(0 if sys.version_info >= (3, 10) else 1)
+raise SystemExit(0 if sys.version_info >= (3, 11) else 1)
 PY
 ok "Python version OK: $(python3 --version)"
 
@@ -278,5 +278,5 @@ echo -e "  1. Edit ${YELLOW}$RYAN_DIR/.env.local${NC} and add ${YELLOW}VITE_GEMI
 echo -e "  2. Edit ${YELLOW}$AGENT_DIR/.env${NC} and add ${YELLOW}ANTHROPIC_API_KEY${NC} and/or ${YELLOW}OPENAI_API_KEY${NC}"
 echo -e "  3. Run ${YELLOW}$INTEGRATIONS_DIR/run_unicc_sandbox_ui.sh${NC}"
 echo -e "  4. Run ${YELLOW}$INTEGRATIONS_DIR/run_unicc_agent.sh${NC}"
-echo -e "  5. Run ${YELLOW}./run_module.sh${NC} for your FastAPI expert module"
+echo -e "  5. Run ${YELLOW}./run_all.sh${NC} to start all services together"
 echo ""
