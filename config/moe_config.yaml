@@ -12,51 +12,33 @@ aggregation:
   reject_threshold: 1.35
   flag_threshold: 0.55
 
-experts:
-  - name: "pillar1_platform_safety"
-    module_id: "expert_module_1_pillar1"
-    evaluate_endpoint: "http://localhost:8000/evaluate"
-    health_endpoint: "http://localhost:8000/health"
-    weight: 1.0
-    timeout_seconds: 60
-    keywords:
-      - "platform"
-      - "governance"
-      - "deployment"
-      - "bias"
-      - "risk"
-      - "safety"
-      - "trustworthiness"
+run_all:
+  script: "scripts/run_all.sh"
+  services:
+    - name: "fastapi_expert_module"
+      service_type: "expert_api"
+      module_id: "expert_module_1_pillar1"
+      host: "0.0.0.0"
+      port: 8000
+      url: "http://localhost:8000"
+      evaluate_endpoint: "http://localhost:8000/evaluate"
+      health_endpoint: "http://localhost:8000/health"
+      docs_endpoint: "http://localhost:8000/docs"
+      log_file: "logs/module1.log"
 
-  - name: "pillar2_adversarial"
-    module_id: "pillar_2_expert_t6"
-    evaluate_endpoint: "http://localhost:8002/evaluate"
-    health_endpoint: "http://localhost:8002/health"
-    weight: 1.15
-    timeout_seconds: 60
-    keywords:
-      - "adversarial"
-      - "jailbreak"
-      - "prompt injection"
-      - "exploit"
-      - "attack"
-      - "unsafe"
-      - "red team"
+    - name: "unicc_ai_safety_sandbox_ui"
+      service_type: "frontend_ui"
+      host: "0.0.0.0"
+      port: 5173
+      url: "http://localhost:5173"
+      log_file: "logs/unicc_sandbox_ui.log"
 
-  - name: "pillar3_policy_compliance"
-    module_id: "pillar_3_policy_compliance"
-    evaluate_endpoint: "http://localhost:8003/evaluate"
-    health_endpoint: "http://localhost:8003/health"
-    weight: 1.0
-    timeout_seconds: 60
-    keywords:
-      - "policy"
-      - "privacy"
-      - "ethics"
-      - "compliance"
-      - "security"
-      - "data"
-      - "governance"
+    - name: "unicc_ai_agent"
+      service_type: "streamlit_ui"
+      host: "0.0.0.0"
+      port: 8501
+      url: "http://localhost:8501"
+      log_file: "logs/unicc_agent.log"
 
 logging:
   audit_log_file: "moe_audit_log.jsonl"
