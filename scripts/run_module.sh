@@ -2,6 +2,10 @@
 # =============================================================================
 # UNICC AI Safety Lab – Start Expert Module 1 (Pillar 1)
 # =============================================================================
+# EN: run_all.sh is for full-stack startup, while run_module.sh is for lightweight local validation of the expert module.
+# Keeping run_module.sh makes troubleshooting easier, reduces startup dependencies, and lets us verify the API independently.
+# 中文：run_all.sh 用于启动完整全栈系统，而 run_module.sh 用于轻量级地本地验证 expert module。
+# 保留 run_module.sh 可以降低排查问题的复杂度，减少启动依赖，并支持对 API 进行独立验证。
 
 set -euo pipefail
 
