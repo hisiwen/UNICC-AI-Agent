@@ -1,0 +1,28 @@
+{
+    "detail": [
+        {
+            "type": "missing",
+            "loc": [
+                "body",
+                "use_case_title"
+            ],
+            "msg": "Field required",
+            "input": {
+                "prompt": "An AI system that screens job applications and auto-rejects candidates",
+                "session_id": "demo-001"
+            }
+        },
+        {
+            "type": "missing",
+            "loc": [
+                "body",
+                "description"
+            ],
+            "msg": "Field required",
+            "input": {
+                "prompt": "An AI system that screens job applications and auto-rejects candidates",
+                "session_id": "demo-001"
+            }
+        }
+    ]
+}
