@@ -1,27 +1,210 @@
 {
-    "detail": [
+    "system": "AI_AGENT Orchestrator",
+    "final_decision": "Approve with Conditions",
+    "summary": {
+        "cross_agent_risks": [
+            "Harmfulness",
+            "Privacy",
+            "Accountability"
+        ],
+        "cross_agent_gaps": [
+            "Establishing clear guidelines for human oversight",
+            "Implementing robust security measures to protect user data",
+            "Increasing diversity and inclusion in the development team",
+            "Insufficient data on the performance of the AI model in rejecting biased or unfair candidates",
+            "Lack of transparency into the decision-making process and algorithmic logic",
+            "No clear documentation of the data sources used to train the AI model"
+        ],
+        "cross_agent_controls": [
+            "Transparent and explainable decision-making processes",
+            "Robust security measures to protect user data",
+            "Regular testing for bias and fairness",
+            "Implement regular audits to detect and address potential biases in the hiring process.",
+            "Ensure that applicant data is anonymized and stored securely to protect privacy.",
+            "Establish a clear accountability framework, including procedures for addressing errors or biases.",
+            "Implement a data audit log to track changes to the AI model and data sources",
+            "Conduct regular testing and validation of the AI model's performance on diverse datasets",
+            "Establish a clear incident response plan with defined roles and responsibilities for critical incidents or errors",
+            "Develop a human oversight design to review and correct AI-driven decisions (e.g., regular audits, feedback mechanisms)",
+            "Implement logging and monitoring capabilities to track system activity and detect potential issues"
+        ]
+    },
+    "agent_results": [
         {
-            "type": "missing",
-            "loc": [
-                "body",
-                "use_case_title"
-            ],
-            "msg": "Field required",
-            "input": {
-                "prompt": "An AI system that screens job applications and auto-rejects candidates",
-                "session_id": "demo-001"
+            "agent_id": "standards_compliance_agent",
+            "agent_name": "Standards Compliance Agent",
+            "raw_text": "{\n  \"executive_summary\": \"The proposed AI Hiring Screening System raises concerns about bias, transparency, and accountability. While it may improve efficiency, it also risks perpetuating existing biases in the hiring process.\",\n  \"triggered_standards\": [\n    \"EU AI Act (2024)\",\n    \"US AI Bill of Rights (2023)\",\n    \"IEEE 7001\",\n    \"IEEE 7003\",\n    \"ISO/IEC 23894\",\n    \"UNESCO Recommendation on the Ethics of AI\"\n  ],\n  \"standards_analysis\": [\n    {\n      \"standard\": \"EU AI Act (2024)\",\n      \"alignment\": \"Low\",\n      \"reasoning\": \"The EU AI Act requires human oversight for high-risk automated decision-making systems. The proposed system lacks transparency and explainability, making it difficult to determine the basis for rejection decisions.\",\n      \"gaps\": [\n        \"Lack of human oversight\",\n        \"Insufficient transparency and explainability\"\n      ],\n      \"controls\": [\n        \"Implement transparent and explainable decision-making processes\",\n        \"Establish clear guidelines for human oversight\"\n      ]\n    },\n    {\n      \"standard\": \"US AI Bill of Rights (2023)\",\n      \"alignment\": \"Medium\",\n      \"reasoning\": \"The US AI Bill of Rights emphasizes the importance of fairness, accountability, and transparency in AI systems. While the proposed system may improve efficiency, it risks perpetuating existing biases in the hiring process.\",\n      \"gaps\": [\n        \"Lack of diversity and inclusion in the development team\",\n        \"Insufficient testing for bias and fairness\"\n      ],\n      \"controls\": [\n        \"Increase diversity and inclusion in the development team\",\n        \"Implement regular testing for bias and fairness\"\n      ]\n    },\n    {\n      \"standard\": \"IEEE 7001\",\n      \"alignment\": \"High\",\n      \"reasoning\": \"IEEE 7001 provides guidelines for the development of AI systems, including the importance of transparency, explainability, and accountability. The proposed system aligns with these principles.\",\n      \"gaps\": [\n        \"Lack of documentation on decision-making processes\"\n      ],\n      \"controls\": [\n        \"Develop clear and concise documentation on decision-making processes\"\n      ]\n    },\n    {\n      \"standard\": \"IEEE 7003\",\n      \"alignment\": \"Medium\",\n      \"reasoning\": \"IEEE 7003 provides guidelines for the development of AI systems, including the importance of testing and validation. While the proposed system may improve efficiency, it risks overlooking critical testing steps.\",\n      \"gaps\": [\n        \"Insufficient testing for bias and fairness\"\n      ],\n      \"controls\": [\n        \"Implement regular testing for bias and fairness\"\n      ]\n    },\n    {\n      \"standard\": \"ISO/IEC 23894\",\n      \"alignment\": \"Low\",\n      \"reasoning\": \"ISO/IEC 23894 provides guidelines for the development of AI systems, including the importance of security and privacy. While the proposed system may improve efficiency, it risks compromising user data.\",\n      \"gaps\": [\n        \"Lack of robust security measures\"\n      ],\n      \"controls\": [\n        \"Implement robust security measures to protect user data\"\n      ]\n    },\n    {\n      \"standard\": \"UNESCO Recommendation on the Ethics of AI\",\n      \"alignment\": \"Unknown\",\n      \"reasoning\": \"The UNESCO Recommendation on the Ethics of AI provides a framework for considering the ethical implications of AI systems. However, its applicability to this specific use case is unclear.\",\n      \"gaps\": [\n        \"Lack of clear guidance on ethics and bias\"\n      ],\n      \"controls\": [\n        \"Consult with experts in ethics and bias to inform decision-making processes\"\n      ]\n    }\n  ],\n  \"key_gaps\": [\n    \"Establishing clear guidelines for human oversight\",\n    \"Implementing robust security measures to protect user data\",\n    \"Increasing diversity and inclusion in the development team\"\n  ],\n  \"required_controls\": [\n    \"Transparent and explainable decision-making processes\",\n    \"Robust security measures to protect user data\",\n    \"Regular testing for bias and fairness\"\n  ],\n  \"recommendation\": \"Approve with Conditions\"\n}",
+            "parsed": {
+                "executive_summary": "The proposed AI Hiring Screening System raises concerns about bias, transparency, and accountability. While it may improve efficiency, it also risks perpetuating existing biases in the hiring process.",
+                "triggered_standards": [
+                    "EU AI Act (2024)",
+                    "US AI Bill of Rights (2023)",
+                    "IEEE 7001",
+                    "IEEE 7003",
+                    "ISO/IEC 23894",
+                    "UNESCO Recommendation on the Ethics of AI"
+                ],
+                "standards_analysis": [
+                    {
+                        "standard": "EU AI Act (2024)",
+                        "alignment": "Low",
+                        "reasoning": "The EU AI Act requires human oversight for high-risk automated decision-making systems. The proposed system lacks transparency and explainability, making it difficult to determine the basis for rejection decisions.",
+                        "gaps": [
+                            "Lack of human oversight",
+                            "Insufficient transparency and explainability"
+                        ],
+                        "controls": [
+                            "Implement transparent and explainable decision-making processes",
+                            "Establish clear guidelines for human oversight"
+                        ]
+                    },
+                    {
+                        "standard": "US AI Bill of Rights (2023)",
+                        "alignment": "Medium",
+                        "reasoning": "The US AI Bill of Rights emphasizes the importance of fairness, accountability, and transparency in AI systems. While the proposed system may improve efficiency, it risks perpetuating existing biases in the hiring process.",
+                        "gaps": [
+                            "Lack of diversity and inclusion in the development team",
+                            "Insufficient testing for bias and fairness"
+                        ],
+                        "controls": [
+                            "Increase diversity and inclusion in the development team",
+                            "Implement regular testing for bias and fairness"
+                        ]
+                    },
+                    {
+                        "standard": "IEEE 7001",
+                        "alignment": "High",
+                        "reasoning": "IEEE 7001 provides guidelines for the development of AI systems, including the importance of transparency, explainability, and accountability. The proposed system aligns with these principles.",
+                        "gaps": [
+                            "Lack of documentation on decision-making processes"
+                        ],
+                        "controls": [
+                            "Develop clear and concise documentation on decision-making processes"
+                        ]
+                    },
+                    {
+                        "standard": "IEEE 7003",
+                        "alignment": "Medium",
+                        "reasoning": "IEEE 7003 provides guidelines for the development of AI systems, including the importance of testing and validation. While the proposed system may improve efficiency, it risks overlooking critical testing steps.",
+                        "gaps": [
+                            "Insufficient testing for bias and fairness"
+                        ],
+                        "controls": [
+                            "Implement regular testing for bias and fairness"
+                        ]
+                    },
+                    {
+                        "standard": "ISO/IEC 23894",
+                        "alignment": "Low",
+                        "reasoning": "ISO/IEC 23894 provides guidelines for the development of AI systems, including the importance of security and privacy. While the proposed system may improve efficiency, it risks compromising user data.",
+                        "gaps": [
+                            "Lack of robust security measures"
+                        ],
+                        "controls": [
+                            "Implement robust security measures to protect user data"
+                        ]
+                    },
+                    {
+                        "standard": "UNESCO Recommendation on the Ethics of AI",
+                        "alignment": "Unknown",
+                        "reasoning": "The UNESCO Recommendation on the Ethics of AI provides a framework for considering the ethical implications of AI systems. However, its applicability to this specific use case is unclear.",
+                        "gaps": [
+                            "Lack of clear guidance on ethics and bias"
+                        ],
+                        "controls": [
+                            "Consult with experts in ethics and bias to inform decision-making processes"
+                        ]
+                    }
+                ],
+                "key_gaps": [
+                    "Establishing clear guidelines for human oversight",
+                    "Implementing robust security measures to protect user data",
+                    "Increasing diversity and inclusion in the development team"
+                ],
+                "required_controls": [
+                    "Transparent and explainable decision-making processes",
+                    "Robust security measures to protect user data",
+                    "Regular testing for bias and fairness"
+                ],
+                "recommendation": "Approve with Conditions"
             }
         },
         {
-            "type": "missing",
-            "loc": [
-                "body",
-                "description"
-            ],
-            "msg": "Field required",
-            "input": {
-                "prompt": "An AI system that screens job applications and auto-rejects candidates",
-                "session_id": "demo-001"
+            "agent_id": "safety_dimensions_agent",
+            "agent_name": "Safety Dimensions Agent",
+            "raw_text": "{\n  \"executive_summary\": \"Automated AI hiring screening system raises concerns about job applicant rejection without human review.\",\n  \"dimension_scores\": [\n    {\n      \"dimension\": \"Harmfulness\",\n      \"score\": 4,\n      \"reasoning\": \"Automatically rejecting applicants could lead to missed opportunities for qualified candidates.\"\n    },\n    {\n      \"dimension\": \"Bias & Fairness\",\n      \"score\": 3,\n      \"reasoning\": \"The system may perpetuate existing biases in the hiring process if trained on biased data.\"\n    },\n    {\n      \"dimension\": \"Transparency\",\n      \"score\": 2,\n      \"reasoning\": \"Applicants may not be aware of the criteria used to reject them, leading to a lack of transparency.\"\n    },\n    {\n      \"dimension\": \"Deception\",\n      \"score\": 1,\n      \"reasoning\": \"The system does not deceive applicants in terms of its purpose or functionality.\"\n    },\n    {\n      \"dimension\": \"Privacy\",\n      \"score\": 5,\n      \"reasoning\": \"The system may collect sensitive personal data from applicants, which could be used for unauthorized purposes.\"\n    },\n    {\n      \"dimension\": \"Accountability\",\n      \"score\": 4,\n      \"reasoning\": \"It is unclear who would be held accountable in case of errors or biases in the hiring process.\"\n    }\n  ],\n  \"high_priority_risks\": [\n    \"Bias & Fairness\",\n    \"Privacy\"\n  ],\n  \"mitigations\": [\n    \"Implement regular audits to detect and address potential biases in the hiring process.\",\n    \"Ensure that applicant data is anonymized and stored securely to protect privacy.\",\n    \"Establish a clear accountability framework, including procedures for addressing errors or biases.\"\n  ],\n  \"recommendation\": \"Approve with Conditions\"\n}",
+            "parsed": {
+                "executive_summary": "Automated AI hiring screening system raises concerns about job applicant rejection without human review.",
+                "dimension_scores": [
+                    {
+                        "dimension": "Harmfulness",
+                        "score": 4,
+                        "reasoning": "Automatically rejecting applicants could lead to missed opportunities for qualified candidates."
+                    },
+                    {
+                        "dimension": "Bias & Fairness",
+                        "score": 3,
+                        "reasoning": "The system may perpetuate existing biases in the hiring process if trained on biased data."
+                    },
+                    {
+                        "dimension": "Transparency",
+                        "score": 2,
+                        "reasoning": "Applicants may not be aware of the criteria used to reject them, leading to a lack of transparency."
+                    },
+                    {
+                        "dimension": "Deception",
+                        "score": 1,
+                        "reasoning": "The system does not deceive applicants in terms of its purpose or functionality."
+                    },
+                    {
+                        "dimension": "Privacy",
+                        "score": 5,
+                        "reasoning": "The system may collect sensitive personal data from applicants, which could be used for unauthorized purposes."
+                    },
+                    {
+                        "dimension": "Accountability",
+                        "score": 4,
+                        "reasoning": "It is unclear who would be held accountable in case of errors or biases in the hiring process."
+                    }
+                ],
+                "high_priority_risks": [
+                    "Harmfulness",
+                    "Privacy",
+                    "Accountability"
+                ],
+                "mitigations": [
+                    "Implement regular audits to detect and address potential biases in the hiring process.",
+                    "Ensure that applicant data is anonymized and stored securely to protect privacy.",
+                    "Establish a clear accountability framework, including procedures for addressing errors or biases."
+                ],
+                "recommendation": "Approve with Conditions"
+            }
+        },
+        {
+            "agent_id": "assurance_accountability_agent",
+            "agent_name": "Assurance & Accountability Agent",
+            "raw_text": "{\n  \"executive_summary\": \"The proposed AI Hiring Screening System lacks sufficient evidence and accountability structure to be deployed responsibly. The system's reliance on automated decision-making without human oversight raises concerns about bias, fairness, and accountability.\",\n  \"evidence_gaps\": [\n    \"Insufficient data on the performance of the AI model in rejecting biased or unfair candidates\",\n    \"Lack of transparency into the decision-making process and algorithmic logic\",\n    \"No clear documentation of the data sources used to train the AI model\"\n  ],\n  \"accountability_structure\": [\n    \"No defined owner for decisions, exceptions, incidents, and monitoring\",\n    \"No clear escalation procedure in place for critical incidents or errors\",\n    \"No human oversight design to review and correct AI-driven decisions\"\n  ],\n  \"assurance_controls\": [\n    \"Implement a data audit log to track changes to the AI model and data sources\",\n    \"Conduct regular testing and validation of the AI model's performance on diverse datasets\",\n    \"Establish a clear incident response plan with defined roles and responsibilities for critical incidents or errors\",\n    \"Develop a human oversight design to review and correct AI-driven decisions (e.g., regular audits, feedback mechanisms)\",\n    \"Implement logging and monitoring capabilities to track system activity and detect potential issues\"\n  ],\n  \"residual_risk\": \"Medium\",\n  \"recommendation\": \"Approve with Conditions\"\n}\n\nNote: The recommendation is \"Approve with Conditions\" because while the system has some necessary controls in place, there are still significant evidence gaps and accountability structure concerns that need to be addressed before deployment.",
+            "parsed": {
+                "executive_summary": "The proposed AI Hiring Screening System lacks sufficient evidence and accountability structure to be deployed responsibly. The system's reliance on automated decision-making without human oversight raises concerns about bias, fairness, and accountability.",
+                "evidence_gaps": [
+                    "Insufficient data on the performance of the AI model in rejecting biased or unfair candidates",
+                    "Lack of transparency into the decision-making process and algorithmic logic",
+                    "No clear documentation of the data sources used to train the AI model"
+                ],
+                "accountability_structure": [
+                    "No defined owner for decisions, exceptions, incidents, and monitoring",
+                    "No clear escalation procedure in place for critical incidents or errors",
+                    "No human oversight design to review and correct AI-driven decisions"
+                ],
+                "assurance_controls": [
+                    "Implement a data audit log to track changes to the AI model and data sources",
+                    "Conduct regular testing and validation of the AI model's performance on diverse datasets",
+                    "Establish a clear incident response plan with defined roles and responsibilities for critical incidents or errors",
+                    "Develop a human oversight design to review and correct AI-driven decisions (e.g., regular audits, feedback mechanisms)",
+                    "Implement logging and monitoring capabilities to track system activity and detect potential issues"
+                ],
+                "residual_risk": "Medium",
+                "recommendation": "Approve with Conditions"
             }
         }
     ]
