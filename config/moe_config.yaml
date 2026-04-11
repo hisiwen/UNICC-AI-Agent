@@ -1,0 +1,44 @@
+moe:
+  module_id: "moe_council_of_experts_v1"
+  module_name: "UNICC Council of Experts MoE"
+  version: "1.0.0"
+  timeout_seconds: 60
+
+routing:
+  mode: "all"   # "all" or "top_k"
+  top_k: 3
+
+aggregation:
+  reject_threshold: 1.35
+  flag_threshold: 0.55
+
+run_all:
+  script: "scripts/run_all.sh"
+  services:
+    - name: "fastapi_expert_module"
+      service_type: "expert_api"
+      module_id: "expert_module_1_pillar1"
+      host: "0.0.0.0"
+      port: 8000
+      url: "http://localhost:8000"
+      evaluate_endpoint: "http://localhost:8000/evaluate"
+      health_endpoint: "http://localhost:8000/health"
+      docs_endpoint: "http://localhost:8000/docs"
+      log_file: "logs/module1.log"
+
+    - name: "unicc_ai_safety_sandbox_ui"
+      service_type: "frontend_ui"
+      host: "0.0.0.0"
+      port: 5173
+      url: "http://localhost:5173"
+      log_file: "logs/unicc_sandbox_ui.log"
+
+    - name: "unicc_ai_agent"
+      service_type: "streamlit_ui"
+      host: "0.0.0.0"
+      port: 8501
+      url: "http://localhost:8501"
+      log_file: "logs/unicc_agent.log"
+
+logging:
+  audit_log_file: "moe_audit_log.jsonl"
