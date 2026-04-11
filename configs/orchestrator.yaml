@@ -1,0 +1,32 @@
+orchestrator:
+  name: AI_AGENT Orchestrator
+  host: 0.0.0.0
+  port: 8080
+  timeout_seconds: 90
+
+routing:
+  mode: all
+
+agents:
+  - agent_id: standards_compliance_agent
+    name: Standards Compliance Agent
+    url: http://localhost:8000/evaluate
+    health_url: http://localhost:8000/health
+  - agent_id: safety_dimensions_agent
+    name: Safety Dimensions Agent
+    url: http://localhost:8001/evaluate
+    health_url: http://localhost:8001/health
+  - agent_id: assurance_accountability_agent
+    name: Assurance & Accountability Agent
+    url: http://localhost:8002/evaluate
+    health_url: http://localhost:8002/health
+
+aggregation:
+  final_decisions:
+    - Approve
+    - Approve with Conditions
+    - Flag for Review
+    - Reject
+  reject_if_any_explicit_reject: true
+  flag_if_any_flag_and_no_reject: true
+  approve_with_conditions_default: true

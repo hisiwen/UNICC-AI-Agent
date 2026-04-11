@@ -1,0 +1,20 @@
+agent:
+  id: safety_dimensions_agent
+  name: Safety Dimensions Agent
+  role: Evaluate proposed AI use cases across harmfulness, bias, transparency, deception, privacy, and accountability.
+  model: llama3.2
+  host: 0.0.0.0
+  port: 8001
+  evaluate_endpoint: /evaluate
+  health_endpoint: /health
+
+prompt:
+  system_file: prompts/safety_dimensions_agent.txt
+
+output:
+  required_sections:
+    - executive_summary
+    - dimension_scores
+    - high_priority_risks
+    - mitigations
+    - recommendation

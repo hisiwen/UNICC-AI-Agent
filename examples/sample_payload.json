@@ -1,0 +1,14 @@
+{
+  "use_case_title": "AI Hiring Screening System",
+  "description": "An organization wants to deploy an AI system that ranks job applicants before recruiter review. The model uses resume text, application history, and screening questions to generate candidate scores.",
+  "intended_users": "HR recruiters and talent acquisition managers",
+  "affected_groups": "Job applicants, especially potentially protected groups",
+  "data_sources": "Resumes, application forms, historical hiring outcomes",
+  "deployment_context": "Pre-screening in enterprise hiring workflow",
+  "current_controls": "Human recruiter reviews top-ranked candidates and can override recommendations",
+  "extra_context": {
+    "geography": "International",
+    "sensitive_domain": true,
+    "human_oversight": true
+  }
+}

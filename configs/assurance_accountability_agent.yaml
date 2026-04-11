@@ -1,0 +1,21 @@
+agent:
+  id: assurance_accountability_agent
+  name: Assurance & Accountability Agent
+  role: Assess evidence quality, control sufficiency, ownership, monitoring, escalation, and residual deployment risk.
+  model: llama3.2
+  host: 0.0.0.0
+  port: 8002
+  evaluate_endpoint: /evaluate
+  health_endpoint: /health
+
+prompt:
+  system_file: prompts/assurance_accountability_agent.txt
+
+output:
+  required_sections:
+    - executive_summary
+    - evidence_gaps
+    - accountability_structure
+    - assurance_controls
+    - residual_risk
+    - recommendation
